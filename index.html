@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سؤالات متداول</title>
+    <style>
+        details {
+            background-color: #e4eaef;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        p {
+            background-color: #30353b;
+            color: #fff9f1;
+            border-radius: 5px;
+            padding: 8px;
+            display: none; /* پنهان کردن متن به صورت پیش‌فرض */
+        }
+        details[open] p {
+            display: block; /* نمایش متن پاسخ زمانی که المان open است */
+            animation: fadeIn 1s forwards; /* افزودن انیمیشن fadeIn */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        details:not([open]) p {
+            display: none; /* اطمینان از اینکه فقط یک پاسخ باز می‌شود */
+        }
+    </style>
+</head>
+<body>
+    <details open>
+        <summary>سوال اول</summary>
+        <p>این متن پاسخ سوال اول است.</p>
+    </details>
+    <details>
+        <summary>سوال دوم</summary>
+        <p>این متن پاسخ سوال دوم است.</p>
+    </details>
+</body>
+</html>
